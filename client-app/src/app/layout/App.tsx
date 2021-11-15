@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Header, List } from 'semantic-ui-react';
-import { ActivitiesApi, Activity } from '../../api';
+import { Activity } from '../../api';
+import { $api } from '../../services/api-service';
 
 function App() {
   const [activities, setActivities] = useState<Activity[]>([]);
 
   useEffect(() => {
-    new ActivitiesApi().apiActivitiesGet()
+    $api.apiActivitiesGet()
     .then(response => setActivities(response.data))
     .catch(err => console.log(err))
   }, [])
