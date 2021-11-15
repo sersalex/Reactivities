@@ -32,43 +32,43 @@ export interface Activity {
      * @type {string}
      * @memberof Activity
      */
-    'id': string;
+    'id'?: string;
     /**
      * 
      * @type {string}
      * @memberof Activity
      */
-    'title': string;
+    'title'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof Activity
      */
-    'date': string;
+    'date'?: string;
     /**
      * 
      * @type {string}
      * @memberof Activity
      */
-    'description': string;
+    'description'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof Activity
      */
-    'category': string;
+    'category'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof Activity
      */
-    'city': string;
+    'city'?: string | null;
     /**
      * 
      * @type {string}
      * @memberof Activity
      */
-    'venue': string;
+    'venue'?: string | null;
 }
 
 /**

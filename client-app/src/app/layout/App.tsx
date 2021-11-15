@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Header, List } from 'semantic-ui-react';
-import { Activity, ActivitiesApi } from '../../api/api'
+import { ActivitiesApi, Activity } from '../../api';
 
 function App() {
   const [activities, setActivities] = useState<Activity[]>([]);
