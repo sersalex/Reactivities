@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { Header, List } from 'semantic-ui-react';
+import React, { Fragment, useEffect, useState } from 'react';
+import { Container, List } from 'semantic-ui-react';
 import { Activity } from '../../api';
+import ActivityDashboard from '../../features/activities/dashboard/ActivityDashboard';
 import { $api } from '../../services/api-service';
+import NavBar from './NavBar';
 
 function App() {
   const [activities, setActivities] = useState<Activity[]>([]);
@@ -13,16 +15,12 @@ function App() {
   }, [])
 
   return (
-    <div>
-      <Header as="h2" icon="users" content="Reactivities"/>
-      <header className="App-header">
-        <List>
-          {activities.map(a => (
-            <List.Item key={a.title}>{a.title}</List.Item>
-          ))}
-        </List>
-      </header>
-    </div>
+    <Fragment>
+      <NavBar/>
+      <Container style={{marginTop: '7em'}}>
+        <ActivityDashboard activities={activities}></ActivityDashboard>
+      </Container>
+    </Fragment>
   );
 }
 
