@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid } from "semantic-ui-react";
 import { Activity } from "../../../api";
+import ActivityForm from "../../form/ActivityForm";
 import ActivityDetails from "../details/ActivityDetails";
 import ActivityList from "./ActivityList";
 
@@ -17,6 +18,7 @@ export default function ActivityDashboard({activities}: Props) {
                 { activities[0] && (
                     <ActivityDetails activity={activities[0]} />
                 )}
+                <ActivityForm />
             </Grid.Column>
         </Grid>
     )
